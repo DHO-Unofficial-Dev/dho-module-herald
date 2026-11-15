@@ -1,0 +1,185 @@
+{
+  "formatVersion": 1,
+  "moduleId": "dev.dho-unofficial.sea-notice",
+  "name": "해역·계절 알림",
+  "version": "1.0.0",
+  "description": "해역에 들어서면 게임 화면 위에 해역 이름을 띄우고 은은한 진입음을 냅니다. 여름·겨울 계절 전환도 알립니다. 소리는 묶음·상위 바다·해역마다 고를 수 있습니다.",
+  "publisher": {
+    "id": "dev.dho-unofficial",
+    "name": "DHO Unofficial Dev"
+  },
+  "license": "MIT",
+  "minimumManagerVersion": "2.2.0",
+  "sdkVersion": "1",
+  "dockIcon": "assets/dock-icon.svg",
+  "capabilities": [
+    "audio.play",
+    "files.user",
+    "navigation.read",
+    "notifications.show",
+    "storage.local"
+  ],
+  "surfaces": [
+    {
+      "surfaceId": "module.dev.dho-unofficial.sea-notice.hud",
+      "name": "hud",
+      "label": "해역·계절 알림",
+      "contractVersion": 1,
+      "presentation": "hud",
+      "preferredSize": {
+        "width": 160,
+        "height": 64
+      },
+      "defaultPlacement": {
+        "anchor": "top-center"
+      },
+      "html": "surfaces/hud/index.html",
+      "css": "surfaces/hud/main.css",
+      "entry": "surfaces/hud/main.js"
+    },
+    {
+      "surfaceId": "module.dev.dho-unofficial.sea-notice.settings",
+      "name": "settings",
+      "label": "설정",
+      "contractVersion": 1,
+      "presentation": "window",
+      "preferredSize": {
+        "width": 600,
+        "height": 760
+      },
+      "html": "surfaces/settings/index.html",
+      "css": "surfaces/settings/main.css",
+      "entry": "surfaces/settings/main.js"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "med.buleria",
+      "path": "sounds/fs-450206-miguelgc96-buleria-guitar-wav.ogg"
+    },
+    {
+      "id": "med.spanish-lick",
+      "path": "sounds/fs-44367-debudding-spanish-lick-ii-acoustic-ab-split-stereo.ogg"
+    },
+    {
+      "id": "med.mandolin",
+      "path": "sounds/fs-90107-lucasgonze-lucasgonze-homestylemandolin-22-aiff.ogg"
+    },
+    {
+      "id": "north.horn-fanfare",
+      "path": "sounds/fs-803823-marlocarlo-french-horn-and-timpani-fanfare-short.ogg"
+    },
+    {
+      "id": "north.celtic-harp",
+      "path": "sounds/fs-580694-slippinonslime-gliss-celtic-harp-wav.ogg"
+    },
+    {
+      "id": "north.tin-whistle",
+      "path": "sounds/fs-255835-neild101-tin-whistle-wav.ogg"
+    },
+    {
+      "id": "atlantic.swell",
+      "path": "sounds/fs-218524-jordivburgel-movie-swell-2.ogg"
+    },
+    {
+      "id": "atlantic.nautical",
+      "path": "sounds/fs-727234-octillionvg-nautical-sfx-short-with-fade-out.ogg"
+    },
+    {
+      "id": "africa.djembe",
+      "path": "sounds/fs-249194-insidebeat-bangui-flower-wav.ogg"
+    },
+    {
+      "id": "africa.marimba",
+      "path": "sounds/fs-488154-phonosupf-marimba-sequence.ogg"
+    },
+    {
+      "id": "redsea.snake-charmer",
+      "path": "sounds/fs-260873-simonjsounds-primitive-snake-charmer-melody.ogg"
+    },
+    {
+      "id": "indian.tabla",
+      "path": "sounds/fs429539-indian-percussion-loop.ogg"
+    },
+    {
+      "id": "indian.bansuri",
+      "path": "sounds/fs448458-bansuri-rag-jog.ogg"
+    },
+    {
+      "id": "indian.sarod",
+      "path": "sounds/fs9606-sarod-intro-riff.ogg"
+    },
+    {
+      "id": "indian.santur",
+      "path": "sounds/fs258090-santur-phrase.ogg"
+    },
+    {
+      "id": "indian.sitar",
+      "path": "sounds/fs-32803-johnwally-sitar-j-wav.ogg"
+    },
+    {
+      "id": "sea-asia.bali-gamelan",
+      "path": "sounds/fs46622-bali-xylophone.ogg"
+    },
+    {
+      "id": "east.koto",
+      "path": "sounds/fs-175672-mondschein90-koto-hit.ogg"
+    },
+    {
+      "id": "east.shakuhachi",
+      "path": "sounds/fs-157759-deleteduser-shakuhachi-with-echo.ogg"
+    },
+    {
+      "id": "east.gong-flute",
+      "path": "sounds/fs-213096-soundsexciting-gong-with-flute.ogg"
+    },
+    {
+      "id": "americas.marimba-jingle",
+      "path": "sounds/fs-878610-qvantor-win-jingle.ogg"
+    },
+    {
+      "id": "americas.steeldrum",
+      "path": "sounds/kenney-jingles_STEEL07.ogg"
+    },
+    {
+      "id": "polar.wind",
+      "path": "sounds/fs-407016-ericssoundschmiede-wind-arctic-storm-breeze-006-wa.ogg"
+    },
+    {
+      "id": "polar.wind-chimes",
+      "path": "sounds/fs-419594-djlprojects-mystical-wind-chimes-transition-fx.ogg"
+    },
+    {
+      "id": "polar.glockenspiel",
+      "path": "sounds/fs-572980-nettuli-story-begins-tarina-alkaa-wav.ogg"
+    },
+    {
+      "id": "other.synth-horn",
+      "path": "sounds/synth-horn-fanfare.wav"
+    },
+    {
+      "id": "other.trumpet-fanfare",
+      "path": "sounds/oga-gchoc-castlefanfare.ogg"
+    },
+    {
+      "id": "other.fanfare-lick",
+      "path": "sounds/oga-fvcalderan-classic-fanfare-lick.ogg"
+    },
+    {
+      "id": "summer.steeldrum",
+      "path": "sounds/summer-kenney-jingles_STEEL01.ogg"
+    },
+    {
+      "id": "summer.jingle",
+      "path": "sounds/summer-oga-ezduzziteh-positive.ogg"
+    },
+    {
+      "id": "winter.vibraphone",
+      "path": "sounds/winter-oga-cynicmusic-bell-arpeggio-24.wav"
+    },
+    {
+      "id": "winter.harp",
+      "path": "sounds/winter-oga-springspring-health_restore.wav"
+    }
+  ]
+}

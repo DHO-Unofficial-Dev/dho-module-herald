@@ -1,0 +1,53 @@
+<main class="sn" aria-labelledby="sn-title">
+  <header class="sn-head">
+    <h1 id="sn-title" class="sn-head__title">해역·계절 알림 · 설정</h1>
+    <span class="sn-head__tag">Module 창</span>
+  </header>
+
+  <section class="sn-group" aria-labelledby="sn-notice-title">
+    <h2 id="sn-notice-title" class="sn-ghead"><span>알림</span></h2>
+    <label class="sn-toggle" for="notify-region">
+      <span>해역 진입 알림</span>
+      <input id="notify-region" class="sn-switch" type="checkbox">
+    </label>
+    <div class="sn-radio" role="radiogroup" aria-label="알림 시점">
+      <label><input type="radio" name="timing" value="A"> 해역마다 배너와 소리</label>
+      <label><input type="radio" name="timing" value="B"> 배너는 해역마다, 소리는 상위 바다가 바뀔 때만</label>
+      <label><input type="radio" name="timing" value="C"> 상위 바다가 바뀔 때만 배너와 소리</label>
+    </div>
+    <label class="sn-toggle" for="notify-season">
+      <span>계절 전환 알림 (여름 ↔ 겨울)</span>
+      <input id="notify-season" class="sn-switch" type="checkbox">
+    </label>
+  </section>
+
+  <section class="sn-group" aria-labelledby="sn-region-title">
+    <h2 id="sn-region-title" class="sn-ghead"><span>진입음</span><span>더 작은 단위의 설정이 우선</span></h2>
+    <div id="region-rows" class="sn-rows"></div>
+    <p id="region-status" class="sn-muted" hidden></p>
+  </section>
+
+  <section class="sn-group" aria-labelledby="sn-season-title">
+    <h2 id="sn-season-title" class="sn-ghead"><span>계절 전환음</span></h2>
+    <div id="season-rows" class="sn-rows"></div>
+  </section>
+
+  <section class="sn-group" aria-labelledby="sn-user-title">
+    <h2 id="sn-user-title" class="sn-ghead"><span>내 소리</span><span id="user-usage" class="sn-usage"></span></h2>
+    <div id="user-rows" class="sn-rows"></div>
+    <p id="user-empty" class="sn-muted">아직 가져온 소리가 없습니다.</p>
+    <button id="user-import" class="sn-button sn-button--primary" type="button">소리 파일 가져오기</button>
+    <p class="sn-muted sn-small">ogg·mp3·wav, 4 MiB·10초 이하. 가져온 소리도 기본 소리와 같은 크기로 맞춰 재생합니다.</p>
+  </section>
+
+  <footer class="sn-note">
+    <span>볼륨·음소거: Navigator 설정 › Module 소리 (기본 50%)</span>
+    <span>HUD가 꺼져 있거나 게임 창이 최소화되면 배너도 소리도 나지 않습니다. 이 창의 "듣기"는 HUD와 관계없이 재생합니다.</span>
+    <details class="sn-credits">
+      <summary>소리 출처(CC0) 보기</summary>
+      <ul id="credits" class="sn-credits__list"></ul>
+    </details>
+  </footer>
+
+  <p id="status" class="sn-status" role="status" aria-live="polite"></p>
+</main>
