@@ -45,7 +45,7 @@ Module 관리에서 이 Module의 "설정" 창을 엽니다.
 | 아프리카·홍해 | 아프리카 서쪽, 아프리카 동쪽, 홍해 | 젬베 타악 |
 | 인도양·동남아시아 | 인도양, 동남아시아 | 타블라풍 타악 |
 | 동아시아·극동 | 동아시아, 유라시아 극동 | 고토 선율 |
-| 아메리카 | 카리브 해, 중남미 동해안, 중남미 서해안, 북미 서해안, 동캐나다, 서캐나다 | 마림바 징글 |
+| 아메리카 | 카리브 해, 중남미 동해안, 중남미 서해안, 북미 서해안, 동캐나다, 서캐나다 | 안데스 팬플루트 |
 | 극지 | 그린란드, 베링 해, 유라시아 북쪽 | 겨울바람 |
 | 남태평양·그 밖 | 남태평양, 상위 바다가 없거나 묶음에 없는 해역 | 합성 뿔피리 팡파르 |
 
@@ -55,7 +55,7 @@ Module 관리에서 이 Module의 "설정" 창을 엽니다.
 
 - 모든 소리를 같은 체감 크기로 맞춥니다. Navigator가 잰 앞 4초 평균 음량(`rmsDb`)으로 재생 이득을
   `gainDb = −40 − rmsDb`로 정해 볼륨 게이지 50%에서 평균 −40 dB RMS 정도로 들리게 합니다.
-- 앞 4초만 재생하고, 4초보다 긴 소리는 끝 1초를 서서히 줄입니다.
+- 앞 4초(안데스 팬플루트는 3.5초)만 재생하고, 그보다 긴 소리는 끝 1초를 서서히 줄입니다.
 - 원본 파일은 그대로 넣었고 자르기·끝 줄이기·음량 맞춤은 모두 재생 옵션으로 처리합니다.
 
 ## 소리 출처
@@ -65,8 +65,8 @@ Module 관리에서 이 Module의 "설정" 창을 엽니다.
 
 | 출처 | 소리 수 | 라이선스 |
 | --- | --- | --- |
-| Freesound (miguelgc96, debudding, lucasgonze, marlocarlo, SlippinOnSlime, neild101, jordivburgel, OctillionVG, Insidebeat, PhonosUPF, simonjsounds, stevysound, Ninad_P, bluedotproductions, nsmusic, JOHNWALLY, thedialogueproject, Mondschein90, 탈퇴한 사용자, SoundsExciting, Qvantor, EricsSoundschmiede, djlprojects, nettuli) | 24 | CC0 1.0 |
-| OpenGameArt (gchoc, fvcalderan, EZduzziteh, cynicmusic, Spring Spring) | 5 | CC0 1.0 |
+| Freesound (miguelgc96, debudding, lucasgonze, marlocarlo, SlippinOnSlime, neild101, jordivburgel, OctillionVG, Insidebeat, PhonosUPF, simonjsounds, stevysound, Ninad_P, bluedotproductions, nsmusic, JOHNWALLY, thedialogueproject, Mondschein90, 탈퇴한 사용자, SoundsExciting, tootoos24, Qvantor, EricsSoundschmiede, djlprojects, nettuli) | 25 | CC0 1.0 |
+| OpenGameArt (gchoc, EZduzziteh, cynicmusic, Spring Spring) | 4 | CC0 1.0 |
 | Kenney Music Jingles (Kenney Vleugels, Kenney.nl) | 2 | CC0 1.0 |
 | 직접 합성 (`scripts/synth-horn-fanfare.mjs`) | 1 | CC0 1.0 |
 

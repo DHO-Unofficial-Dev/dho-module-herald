@@ -39,14 +39,14 @@ CC0는 출처 표기를 요구하지 않지만, 저작자에게 감사하는 뜻
 | `fs-175672-mondschein90-koto-hit.ogg` | 동아시아 · 고토 선율 (동아시아·극동 기본) | Koto Hit | Mondschein90 | https://freesound.org/people/Mondschein90/sounds/175672/ | CC0 1.0 | 3.66초 |
 | `fs-157759-deleteduser-shakuhachi-with-echo.ogg` | 동아시아 · 샤쿠하치 | Shakuhachi with Echo | (탈퇴한 Freesound 사용자) | https://freesound.org/people/--DeletedUser--/sounds/157759/ | CC0 1.0 | 3.73초 |
 | `fs-213096-soundsexciting-gong-with-flute.ogg` | 동아시아 · 징과 피리 | Gong with flute | SoundsExciting | https://freesound.org/people/SoundsExciting/sounds/213096/ | CC0 1.0 | 5.04초 |
-| `fs-878610-qvantor-win-jingle.ogg` | 아메리카 · 마림바 징글 (아메리카 기본) | Win Jingle | Qvantor | https://freesound.org/people/Qvantor/sounds/878610/ | CC0 1.0 | 2.97초 |
+| `fs-441387-tootoos24-peru-wav.ogg` | 아메리카 · 안데스 팬플루트 (아메리카 기본, 앞 3.5초 재생) | Peru.wav | tootoos24 | https://freesound.org/people/tootoos24/sounds/441387/ | CC0 1.0 | 7.05초 |
+| `fs-878610-qvantor-win-jingle.ogg` | 아메리카 · 마림바 징글 | Win Jingle | Qvantor | https://freesound.org/people/Qvantor/sounds/878610/ | CC0 1.0 | 2.97초 |
 | `kenney-jingles_STEEL07.ogg` | 아메리카 · 스틸드럼 | Music Jingles (STEEL07) | Kenney Vleugels (Kenney.nl) | https://kenney.nl/assets/music-jingles | CC0 1.0 | 1.55초 |
 | `fs-407016-ericssoundschmiede-wind-arctic-storm-breeze-006-wa.ogg` | 극지 · 겨울바람 (극지 기본) | Wind_Arctic_Storm_Breeze-006.wav | EricsSoundschmiede | https://freesound.org/people/EricsSoundschmiede/sounds/407016/ | CC0 1.0 | 3.75초 |
 | `fs-419594-djlprojects-mystical-wind-chimes-transition-fx.ogg` | 극지 · 윈드차임 | Mystical Wind Chimes Transition FX | djlprojects | https://freesound.org/people/djlprojects/sounds/419594/ | CC0 1.0 | 4.86초 |
 | `fs-572980-nettuli-story-begins-tarina-alkaa-wav.ogg` | 극지 · 글로켄슈필 | Story begins / Tarina alkaa.wav | nettuli | https://freesound.org/people/nettuli/sounds/572980/ | CC0 1.0 | 4.46초 |
 | `synth-horn-fanfare.wav` | 합성 · 뿔피리 팡파르 (남태평양·그 밖 기본) | 합성 뿔피리 팡파르 | 이 저장소에서 직접 합성 | `scripts/synth-horn-fanfare.mjs` | CC0 1.0 | 4.60초 |
 | `oga-gchoc-castlefanfare.ogg` | 공통 · 트럼펫 팡파르 | Trumpet Fanfare | gchoc | https://opengameart.org/content/trumpet-fanfare | CC0 1.0 | 2.42초 |
-| `oga-fvcalderan-classic-fanfare-lick.ogg` | 공통 · 클래식 팡파르 릭 | Classic fanfare lick | fvcalderan | https://opengameart.org/content/classic-fanfare-lick | CC0 1.0 | 2.93초 |
 | `summer-kenney-jingles_STEEL01.ogg` | 여름 · 스틸드럼 (여름 기본) | Music Jingles (STEEL01) | Kenney Vleugels (Kenney.nl) | https://kenney.nl/assets/music-jingles | CC0 1.0 | 1.38초 |
 | `summer-oga-ezduzziteh-positive.ogg` | 여름 · 밝은 징글 | Positive Sound | EZduzziteh | https://opengameart.org/content/positive-sound | CC0 1.0 | 1.29초 |
 | `winter-oga-cynicmusic-bell-arpeggio-24.wav` | 겨울 · 비브라폰 아르페지오 (겨울 기본) | Bell Arpeggio 24 | cynicmusic | https://opengameart.org/content/bell-arpeggio-24 | CC0 1.0 | 2.55초 |
@@ -63,5 +63,4 @@ CC0는 출처 표기를 요구하지 않지만, 저작자에게 감사하는 뜻
   게시돼 있습니다.
 - `fs429539-indian-percussion-loop.ogg`: 설명은 "Short Indian percussion loop at 121 BPM"뿐이며 실연·샘플 라이브러리 여부는
   적혀 있지 않습니다.
-- Navigator 공개 도구는 Vorbis 길이를 보수적으로(packet 수 × 긴 block 절반) 재며 10초를 넘으면 받지 않습니다. 그래서 후보였던
-  "Peru.wav"(tootoos24, 실제 7.05초)와 "Seagulls and Rigging Sounds"(timsc, 실제 4.96초)는 넣지 못했습니다.
+- `fs-441387-tootoos24-peru-wav.ogg`는 실제 7.05초이며 앞 3.5초만 재생하고 끝을 서서히 줄입니다. 원본 그대로 넣었습니다.

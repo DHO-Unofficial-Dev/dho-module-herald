@@ -27,6 +27,7 @@ export function createPlayer(audio, userSounds) {
     const options = playbackOptions({
       rmsDb: await loudness(soundRef),
       lengthMs: builtin ? builtin.lengthMs : user.durationMillis,
+      ...(builtin ? { clipMs: builtin.clipMs } : {}),
     });
     try {
       await audio.play(soundRef, options);

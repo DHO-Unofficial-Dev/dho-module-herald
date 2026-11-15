@@ -184,14 +184,15 @@ export function spaced(text) {
 }
 
 /**
- * 재생 옵션. 평균 음량을 −40 dB RMS(볼륨 게이지 50% 기준)에 맞추고, 4초보다 긴 소리는 앞 4초만 재생하며 끝 1초를 줄인다.
+ * 재생 옵션. 평균 음량을 −40 dB RMS(볼륨 게이지 50% 기준)에 맞추고, `clipMs`(기본 4초)보다 긴 소리는 앞부분만 재생하며
+ * 끝 1초를 줄인다.
  * `rmsDb`를 모르면(예: Workbench 미리보기) 0 dB로 둔다.
  */
-export function playbackOptions({ rmsDb, lengthMs }) {
-  const options = { maxDurationMs: CLIP_MS };
+export function playbackOptions({ rmsDb, lengthMs, clipMs = CLIP_MS }) {
+  const options = { maxDurationMs: clipMs };
   if (typeof rmsDb === 'number' && Number.isFinite(rmsDb)) {
     options.gainDb = Math.max(-60, Math.min(6, Math.round((-40 - rmsDb) * 10) / 10));
   }
-  if (typeof lengthMs === 'number' && lengthMs > CLIP_MS) options.fadeOutMs = FADE_OUT_MS;
+  if (typeof lengthMs === 'number' && lengthMs > clipMs) options.fadeOutMs = FADE_OUT_MS;
   return options;
 }

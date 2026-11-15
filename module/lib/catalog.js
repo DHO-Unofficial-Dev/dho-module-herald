@@ -13,7 +13,7 @@ export const GROUPS = Object.freeze([
     id: 'americas',
     label: '아메리카',
     parents: ['카리브 해', '중남미 동해안', '중남미 서해안', '북미 서해안', '동캐나다', '서캐나다'],
-    defaultSound: 'americas.marimba-jingle',
+    defaultSound: 'americas.panflute',
   },
   { id: 'polar', label: '극지', parents: ['그린란드', '베링 해', '유라시아 북쪽'], defaultSound: 'polar.wind' },
   { id: 'other', label: '남태평양·그 밖', parents: ['남태평양'], defaultSound: 'other.synth-horn' },
@@ -33,7 +33,8 @@ export const FADE_OUT_MS = 1000;
 const CC0 = 'CC0 1.0';
 
 /**
- * Module 소리. `area`·`mood`는 화면 이름, `lengthMs`는 원본의 실제 길이(파일 끝 granule 기준 실측)다.
+ * Module 소리. `area`·`mood`는 화면 이름, `lengthMs`는 원본의 실제 길이(파일 끝 granule 기준 실측),
+ * `clipMs`는 앞부분만 재생할 길이(기본 4초)다.
  * 원본 파일을 그대로 넣었고 자르기·끝 줄이기·음량 맞춤은 재생 옵션으로 처리한다.
  */
 export const SOUNDS = Object.freeze([
@@ -57,6 +58,7 @@ export const SOUNDS = Object.freeze([
   s('east.koto', 'fs-175672-mondschein90-koto-hit.ogg', '동아시아', '고토 선율', 3660, 'Koto Hit', 'Mondschein90', 'https://freesound.org/people/Mondschein90/sounds/175672/'),
   s('east.shakuhachi', 'fs-157759-deleteduser-shakuhachi-with-echo.ogg', '동아시아', '샤쿠하치', 3730, 'Shakuhachi with Echo', '(탈퇴한 Freesound 사용자)', 'https://freesound.org/people/--DeletedUser--/sounds/157759/'),
   s('east.gong-flute', 'fs-213096-soundsexciting-gong-with-flute.ogg', '동아시아', '징과 피리', 5040, 'Gong with flute', 'SoundsExciting', 'https://freesound.org/people/SoundsExciting/sounds/213096/'),
+  s('americas.panflute', 'fs-441387-tootoos24-peru-wav.ogg', '아메리카', '안데스 팬플루트', 7050, 'Peru.wav', 'tootoos24', 'https://freesound.org/people/tootoos24/sounds/441387/', CC0, 3500),
   s('americas.marimba-jingle', 'fs-878610-qvantor-win-jingle.ogg', '아메리카', '마림바 징글', 2970, 'Win Jingle', 'Qvantor', 'https://freesound.org/people/Qvantor/sounds/878610/'),
   s('americas.steeldrum', 'kenney-jingles_STEEL07.ogg', '아메리카', '스틸드럼', 1550, 'Music Jingles (STEEL07)', 'Kenney Vleugels (Kenney.nl)', 'https://kenney.nl/assets/music-jingles'),
   s('polar.wind', 'fs-407016-ericssoundschmiede-wind-arctic-storm-breeze-006-wa.ogg', '극지', '겨울바람', 3750, 'Wind_Arctic_Storm_Breeze-006.wav', 'EricsSoundschmiede', 'https://freesound.org/people/EricsSoundschmiede/sounds/407016/'),
@@ -64,15 +66,14 @@ export const SOUNDS = Object.freeze([
   s('polar.glockenspiel', 'fs-572980-nettuli-story-begins-tarina-alkaa-wav.ogg', '극지', '글로켄슈필', 4460, 'Story begins / Tarina alkaa.wav', 'nettuli', 'https://freesound.org/people/nettuli/sounds/572980/'),
   s('other.synth-horn', 'synth-horn-fanfare.wav', '합성', '뿔피리 팡파르', 4600, '합성 뿔피리 팡파르', '이 저장소 scripts/synth-horn-fanfare.mjs로 합성', '', 'CC0 1.0 (직접 합성)'),
   s('other.trumpet-fanfare', 'oga-gchoc-castlefanfare.ogg', '공통', '트럼펫 팡파르', 2420, 'Trumpet Fanfare', 'gchoc', 'https://opengameart.org/content/trumpet-fanfare'),
-  s('other.fanfare-lick', 'oga-fvcalderan-classic-fanfare-lick.ogg', '공통', '클래식 팡파르 릭', 2930, 'Classic fanfare lick', 'fvcalderan', 'https://opengameart.org/content/classic-fanfare-lick'),
   s('summer.steeldrum', 'summer-kenney-jingles_STEEL01.ogg', '여름', '스틸드럼', 1380, 'Music Jingles (STEEL01)', 'Kenney Vleugels (Kenney.nl)', 'https://kenney.nl/assets/music-jingles'),
   s('summer.jingle', 'summer-oga-ezduzziteh-positive.ogg', '여름', '밝은 징글', 1290, 'Positive Sound', 'EZduzziteh', 'https://opengameart.org/content/positive-sound'),
   s('winter.vibraphone', 'winter-oga-cynicmusic-bell-arpeggio-24.wav', '겨울', '비브라폰 아르페지오', 2550, 'Bell Arpeggio 24', 'cynicmusic', 'https://opengameart.org/content/bell-arpeggio-24'),
   s('winter.harp', 'winter-oga-springspring-health_restore.wav', '겨울', '하프풍', 3040, 'Magic Words + Healing Sound Effect', 'Spring Spring', 'https://opengameart.org/content/magic-words-healing-sound-effect'),
 ]);
 
-function s(id, file, area, mood, lengthMs, title, author, sourceUrl, license = CC0) {
-  return Object.freeze({ id, path: `sounds/${file}`, area, mood, lengthMs, title, author, sourceUrl, license });
+function s(id, file, area, mood, lengthMs, title, author, sourceUrl, license = CC0, clipMs = CLIP_MS) {
+  return Object.freeze({ id, path: `sounds/${file}`, area, mood, lengthMs, clipMs, title, author, sourceUrl, license });
 }
 
 const SOUND_BY_ID = new Map(SOUNDS.map((sound) => [sound.id, sound]));

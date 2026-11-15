@@ -120,6 +120,9 @@ test('부제 자간과 재생 옵션', () => {
   assert.deepEqual(playbackOptions({ rmsDb: -10, lengthMs: 1500 }), { maxDurationMs: 4000, gainDb: -30 });
   assert.deepEqual(playbackOptions({ rmsDb: -50, lengthMs: 3000 }), { maxDurationMs: 4000, gainDb: 6 });
   assert.deepEqual(playbackOptions({ rmsDb: null, lengthMs: 3000 }), { maxDurationMs: 4000 });
+  const peru = soundById('americas.panflute');
+  assert.deepEqual(playbackOptions({ rmsDb: -20, lengthMs: peru.lengthMs, clipMs: peru.clipMs }), { maxDurationMs: 3500, gainDb: -20, fadeOutMs: 1000 });
+  assert.equal(groupForParent('카리브 해').defaultSound, 'americas.panflute');
 });
 
 function harness({ timing = 'B', shown = true, prefs = {} } = {}) {

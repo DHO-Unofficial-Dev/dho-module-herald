@@ -134,6 +134,10 @@
       "path": "sounds/fs-213096-soundsexciting-gong-with-flute.ogg"
     },
     {
+      "id": "americas.panflute",
+      "path": "sounds/fs-441387-tootoos24-peru-wav.ogg"
+    },
+    {
       "id": "americas.marimba-jingle",
       "path": "sounds/fs-878610-qvantor-win-jingle.ogg"
     },
@@ -160,10 +164,6 @@
     {
       "id": "other.trumpet-fanfare",
       "path": "sounds/oga-gchoc-castlefanfare.ogg"
-    },
-    {
-      "id": "other.fanfare-lick",
-      "path": "sounds/oga-fvcalderan-classic-fanfare-lick.ogg"
     },
     {
       "id": "summer.steeldrum",
