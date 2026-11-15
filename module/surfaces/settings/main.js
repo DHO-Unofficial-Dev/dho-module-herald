@@ -301,7 +301,6 @@ function renderUserSounds() {
     const label = el('div', 'sn-row__name');
     const usages = usagesOf(prefs, item.soundRef);
     const seconds = typeof item.durationMillis === 'number' ? `${(item.durationMillis / 1000).toFixed(1)}초 · ` : '';
-    // 공개 도구의 import 검사기는 중첩 template literal을 읽지 못하므로 문자열을 나눠 만든다.
     const usageText = usages.length > 0 ? usages.join(', ') + '에서 사용 중' : '사용 안 함';
     label.append(el('b', '', `내 소리 ${item.number}`), el('small', '', seconds + usageText));
     const listen = el('button', 'sn-button', '듣기');

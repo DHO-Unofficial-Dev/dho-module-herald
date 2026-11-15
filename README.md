@@ -116,8 +116,8 @@ test/logic.test.mjs
 ```
 
 공개 도구는 Surface 파일 이름을 `surfaces/<name>/index.html`, `main.css`, `main.js`로만 받습니다. 또 JavaScript의
-import 검사기가 중첩 template literal과 `export` 문 안의 `.from` 호출을 import 구문으로 잘못 읽으므로 이 저장소는 두
-형태를 쓰지 않습니다.
+import 검사기가 `export` 문 안의 `.from` 호출(예: `Array.from`)을 import 구문으로 잘못 읽으므로 이 저장소는 그 형태를
+쓰지 않습니다.
 
 ## 릴리즈
 
