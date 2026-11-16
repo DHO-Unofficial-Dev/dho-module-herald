@@ -10,7 +10,7 @@
 
 ## 설치
 
-1. [Releases](../../releases)에서 `dho-module-sea-notice-<버전>.dho-module`을 받습니다.
+1. [Releases](../../releases)에서 `herald-<버전>.dho-module`을 받습니다.
 2. DHO Navigator에서 Navigator 로고 도구 서랍의 Module 관리를 열고 받은 파일을 설치합니다.
 3. 설치 화면에서 권한을 확인합니다.
    - `navigation.read`: 해역·계절 변경 이벤트와 해역 목록 읽기
@@ -85,8 +85,8 @@ node --test test/
 
 # 3. 검증, 빌드, archive 검사
 node .tools/tools/validate-module.mjs module
-node .tools/tools/build-module.mjs module dist/dho-module-sea-notice-1.0.0.dho-module
-node .tools/tools/verify-module.mjs dist/dho-module-sea-notice-1.0.0.dho-module
+node .tools/tools/build-module.mjs module dist/herald-1.0.0.dho-module
+node .tools/tools/verify-module.mjs dist/herald-1.0.0.dho-module
 ```
 
 각 명령은 한 줄 JSON을 출력하며 `status`가 `valid`면 통과입니다. 편집기 타입 지원이 필요하면 공개 도구의
