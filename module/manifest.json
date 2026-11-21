@@ -1,12 +1,12 @@
 {
   "formatVersion": 1,
-  "moduleId": "dev.dho-unofficial.sea-notice",
+  "moduleId": "app.dhoport.herald",
   "name": "Herald",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "해역·계절 알림. 해역에 들어서면 게임 화면 위에 해역 이름을 띄우고 은은한 진입음을 냅니다. 여름·겨울 계절 전환도 알립니다. 소리는 묶음·상위 바다·해역마다 고를 수 있습니다.",
   "publisher": {
-    "id": "dev.dho-unofficial",
-    "name": "DHO Unofficial Dev"
+    "id": "app.dhoport",
+    "name": "DHO PORT"
   },
   "license": "MIT",
   "minimumManagerVersion": "2.2.0",
@@ -21,7 +21,7 @@
   ],
   "surfaces": [
     {
-      "surfaceId": "module.dev.dho-unofficial.sea-notice.hud",
+      "surfaceId": "module.app.dhoport.herald.hud",
       "name": "hud",
       "label": "해역·계절 알림",
       "contractVersion": 1,
@@ -38,7 +38,7 @@
       "entry": "surfaces/hud/main.js"
     },
     {
-      "surfaceId": "module.dev.dho-unofficial.sea-notice.settings",
+      "surfaceId": "module.app.dhoport.herald.settings",
       "name": "settings",
       "label": "설정",
       "contractVersion": 1,
