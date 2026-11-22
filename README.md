@@ -1,6 +1,6 @@
 # Herald
 
-해역·계절 알림. DHO Navigator 2.2.0용 예제 Module입니다. 배가 새 해역에 들어서면 게임 화면 위쪽에 해역 이름을 크게 띄우고
+해역·계절 알림. DHO Navigator 2.2.1용 예제 Module입니다. 배가 새 해역에 들어서면 게임 화면 위쪽에 해역 이름을 크게 띄우고
 은은한 진입음을 냅니다. 여름·겨울 계절이 바뀔 때도 알립니다.
 
 - 제목은 해역 이름, 부제는 상위 바다 이름입니다(예: 비스케이만 / 북 해).
@@ -85,8 +85,8 @@ node --test test/
 
 # 3. 검증, 빌드, archive 검사
 node .tools/tools/validate-module.mjs module
-node .tools/tools/build-module.mjs module dist/herald-1.0.1.dho-module
-node .tools/tools/verify-module.mjs dist/herald-1.0.1.dho-module
+node .tools/tools/build-module.mjs module dist/herald-1.1.1.dho-module
+node .tools/tools/verify-module.mjs dist/herald-1.1.1.dho-module
 ```
 
 각 명령은 한 줄 JSON을 출력하며 `status`가 `valid`면 통과입니다. 편집기 타입 지원이 필요하면 공개 도구의
@@ -121,13 +121,14 @@ import 검사기가 `export` 문 안의 `.from` 호출(예: `Array.from`)을 imp
 
 ## 릴리즈
 
-`v<버전>` 태그를 push하면 GitHub Actions(`.github/workflows/release.yml`)가 공개 Node 도구로 검증·빌드한 뒤
-`.dho-module`과 sha256 파일을 Release에 첨부합니다. 태그는 `module/manifest.json`의 `version`과 같아야 합니다.
+main에 있는 커밋에 `v<버전>` 태그를 push하면 GitHub Actions(`.github/workflows/release.yml`)가 Release를 만듭니다.
+태그는 `module/manifest.json`의 `version`과 같아야 합니다.
 
-- 공개 도구는 DHO-Manager 저장소의 최신 Release(`releases/latest/download/dho-module-node-tools.zip`)에서 받습니다.
-  DHO Navigator 2.2.0 정식 릴리즈 전에는 이 자산이 없어 job이 실패합니다.
-- 항상 최신 도구를 쓰므로 나중에 도구 규칙이 바뀌면 같은 태그라도 결과가 달라질 수 있습니다. job 로그에 받은 도구 zip의
-  sha256을 남깁니다.
+- build job이 `.github/tools/`의 고정 도구(워크플로에 적은 SHA-256과 같아야 함)로 검사·빌드합니다.
+- sign job이 저장소 코드를 실행하지 않고 DHO Navigator 공식 서명을 넣습니다. publish job이 공식 공개 키로 다시 확인한 뒤
+  서명된 `.dho-module`과 sha256 파일을 Release에 첨부합니다.
+- 공식 서명은 이 저장소의 Release에서만 만들어집니다. 직접 빌드한 파일에는 서명이 없어 `app.dhoport.herald` ID로
+  설치되지 않습니다. 직접 고쳐 쓰려면 자기 배포자 ID로 바꿔 빌드합니다.
 
 ## 라이선스
 
